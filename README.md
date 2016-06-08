@@ -1,5 +1,7 @@
 # firefox-sync-bug
 
+Aka Bugzilla@Mozilla [Bug 1279007](https://bugzilla.mozilla.org/show_bug.cgi?id=1279007)
+
 This project reproduces a bug that occurs in FireFox 30 and above when attempting to perform synchronous requests with `XMLHttpRequest` for JavaScript sources (appended to documents using JavaScript DOM manipulation) that depend on allocated memory of other sources. Developers experience inconsistent Type Errors as a symptom of the bug. Although normally key value pairs residing after the request call would be allocated into memory immediately, due to the bug key value pairs are allocated after the request receives a response. Further, the queue continues processing messages of subsequent sources through the duration of the request (see [Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)) and, without the allocation of memory from preceding parsed messages, developers can expect Type Errors because key value pairs may not yet exist.
 
 # Run
