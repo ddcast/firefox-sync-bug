@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p>See output in browser debugger or other developer tool.</p>
+
+<script>
+appendScript('./js1.js');
+appendScript('./js2.js');
+
+function appendScript(src) {
+	var el = document.createElement('script');
+	el.type = 'text/javascript';
+	el.async = false;
+	el.src = src;
+
+	document.head.appendChild(el);
+}
+</script>
+
+</body>
+</html>
