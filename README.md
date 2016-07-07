@@ -27,4 +27,4 @@ Likely unlikely when browsing specification docs. Although, this potentially bre
 
 # Work-around
 
-Please avoid performing synchronous requests. Alternatively, if synchronous requests are unavoidable, consider implementing events to handle the code after the request is complete. Also, you may chose to remove the lexical dependencies on allocated memory across sources. For example, move the source with the request call and the succeeding sources into one source. (This is not recommended.)
+Please avoid performing synchronous requests. Alternatively, if synchronous requests are unavoidable, consider implementing events to handle the code after the request is complete. Also, you may choose to remove the lexical dependencies on allocated memory across sources. For example, move the source with the request call and the succeeding sources into one source. (This is not recommended.)
